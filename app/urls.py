@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # namespace='main' Определяет к какому приложению относится адрес
     path('', include('main.urls', namespace='main')),
+    path('catalog/', include('goods.urls', namespace='catalog')),
+
 
 ]
