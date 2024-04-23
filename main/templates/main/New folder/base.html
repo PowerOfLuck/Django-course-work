@@ -1,5 +1,4 @@
 {% load static %}
-{% load goods_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +71,7 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item  text-white" href="#">Выйти</a></li>
-                            </ul>
+                            </ul>p
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -96,10 +95,13 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                        {% tag_categories as categories %}
-                        {% for category in categories %}
-                            <li><a class="dropdown-item text-white" href="{% url "catalog:index" category.slug %}">{{category.name}}</a></li>
-                        {% endfor %}
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Все товары</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Кухня</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Спальня</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Гостинная</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Офис</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Фурнитура</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Декор</a></li>
                     </ul>
                 </div>
                 <!-- Значек корзины, вызывает модальное окно -->
@@ -190,7 +192,9 @@
             </div>
         </div>
     </section>
-    {% block footer %}{% endblock  %}
+    {% block footer %}
+
+    {% endblock  %}
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
     <script src="{% static "deps/js/jquery-events.js" %}"></script>
     <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
