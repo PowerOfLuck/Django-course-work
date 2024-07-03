@@ -1,11 +1,12 @@
+#python stuff
 venv/
 .pylintrc
 __pycache__/
 
-# ide stuff
+#ide stuff
 .vscode
 .idea
 
-# django stuff
+#django stuff
 db.sqlite3
 media/
